@@ -1,42 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <style>
-      body {
-        display: flex;
-        padding: 0;
-        margin: 0;
-        width: 100vw;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align: center;
-      }
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-      main {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        margin-top: 20px;
-      }
+  <!-- Site Properties -->
+  <title>Asset Request</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.css">
 
-      h1, h2 {
-        font-weight: 500;
-        font-size: 32px;
-      }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.js"></script>
 
-      h2 {
-        font-weight: 300;
-        font-size: 16px;
+</head>
+<body>
+
+  <div class="ui inverted menu"></div>
+
+
+<h1 class="ui center aligned header">MDA Asset Request Form</h1>
+
+
+
+<div class="ui section divider"></div>
+<h2 class="ui center aligned icon header">
+  <i class="user outline icon"></i>
+  Manager Request
+</h2>
+
+
+<div class="ui text container">
+  <form class="ui form segment">
+    <p>Please check your <i><a href="http://mda-sharepoint:2000/pandp/Policies%20and%20Procedures/Financial%20Delegation%20Policy.pdf" target="_blank">financial delegation</a></i> for initial purchase and ongoing costs before submitting this request. Price table below for reference.</p>
+    <div class="two fields">
+      <div class="field">
+        <label>Name of employee</label>
+        <input type="text" placeholder="Full Name" name="name">
+      </div>
+      <div class="field">
+          <label>Employee MDA email address</label>
+          <input type="text" placeholder="Email Address" name="email">
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <label>Manager filling in this form</label>
+        <input type="text" placeholder="Manager Name" name="supervisor">
+      </div>
+      <div class="field">
+        <label>Manager MDA email address</label>
+        <input type="text" placeholder="Manager Email Address" name="supervisor_email">
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="field">
+        <label>Program</label>
+        <input type="text" placeholder="Program" name="program">
+      </div>
+      <div class="field">
+        <label>Cost Centre</label>
+        <input type="text" placeholder="Cost Centre" name="cost_centre">
+      </div>
+    </div>
+    <div class="two fields">
+        <div class="field">
+          <label>Date required by</label>
+          <input type="date" placeholder="Date Required By" name="date_required">
+          <p>Normal response time is 3-5 working days</p>
+        </div>
+      </div>
+    <h4 class="ui horizontal divider header">
+        <i class="power off icon"></i>Equipment Requested
+    </h4>
+    <div class="grouped fields">
+      <div class="field">
+        <div class="ui checkbox">
+          <input type="checkbox">
+          <label for="equipment"><i class="phone square icon"></i>Basic Phone ($30-$50)</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+            <input type="checkbox">
+            <label for="equipment"><i class="mobile alternate icon"></i>Smart Phone ($500-$1,300)</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="inline fields">
+          <div class="field">
+            <div class="ui checkbox">
+                <input type="checkbox">
+                <label for="equipment"><i class="tablet alternate icon"></i>Tablet/iPad ($500-$1,300)</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+                <input type="checkbox">
+                <label for="equipment"><i class="keyboard icon"></i>Tablet keyboard ($50-$150)</label>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui checkbox">
+                <input type="checkbox">
+                <label for="equipment"><i class="signal icon"></i>Cellular data ($30 per month on a 24-month contract)</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui checkbox">
+            <input type="checkbox">
+            <label for="equipment"><i class="laptop icon"></i>Laptop ($750-$1,500)</label>
+        </div>
+      </div>
+      <div class="field">
+          <label>Special requirement details:</label>
+          <textarea rows="2"></textarea>
+      </div>
+    </div>
+
+  </form>      
+</div>
+
+<!-- Content JS HERE !-->
+<style>
+
+</style>
+
+<script type="text/javascript">
+
+$('.ui.form')
+  .form({
+    fields: {
+      name: {
+        identifier: 'name',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your full name'
+          }
+        ]
+      },
+      skills: {
+        identifier: 'email',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select at least two skills'
+          }
+        ]
+      },
+      gender: {
+        identifier: 'gender',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a gender'
+          }
+        ]
+      },
+      username: {
+        identifier: 'username',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a username'
+          }
+        ]
+      },
+      password: {
+        identifier: 'password',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a password'
+          },
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your password must be at least {ruleValue} characters'
+          }
+        ]
+      },
+      terms: {
+        identifier: 'terms',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'You must agree to the terms and conditions'
+          }
+        ]
       }
-    </style>
-  </head>
-  <body>
-    <img src="first-gh-deployment.svg" alt="First GitHub Deployment" title="First GitHub Deployment" height="50" width="184" />
-    <main>
-      <h1>Congratulations!</h1>
-      <h2>You just made your first GitHub deployment.</h2>
-    </main>
-  </body>
+    }
+  })
+;
+
+
+$(document).ready(function() {
+
+ 
+});
+</script>
+
+</body>
 </html>
